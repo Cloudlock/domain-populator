@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Status Tests</title>
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.js"></script>
+  {% include "gapps/_jquery_ui_headers.html" %}
+  <style type="text/css" media="screen">
+    #domainer {
+      width: 50%
+      margin: 0px auto;
+      border: 3px solid black;
+      padding: 1em;
+    }
+    .op-progress {
+      margin: 1em;
+    }
+    .op-progress span {
+      font-style: italic;
+    }
+    #domainer .ui-progressbar, #domainer .ui-progressbar-value {
+      height: 18px;
+      font-size: 10px;
+      line-height: 18px;
+      -moz-border-radius: 4px;
+    }
+  </style>
+  {% include "status/status.html" %}
+</head>
+<body>
+  <div id="operation_id2" style="display:none">{{ operation_id2 }}</div>
+  <div id="operation_id3" style="display:none">{{ operation_id3 }}</div>
+  <br>
+  <script id="body" type="text/x-jquery-tmpl">
+    Completed ${done} of ${total}
+  </script>
+  <script id="step1" type="text/x-jquery-tmpl">
+    Sourced ${done} of ${total} widget parts
+  </script>
+  <script id="step2" type="text/x-jquery-tmpl">
+    Completed build of ${done} of ${total} widgets
+  </script>
+  <br>
+  <div id="status"></div>
+  <div id="status3"></div>
+  <div id="dialog" class="hide" title="Shit be happenin'!">
+    <p>Watch out for the progress bar!</p>
+    <div id="status2"></div>
+  </div>
+  <div id="domainer"></div>
+  <br>
+  <input type="button" class="button" value="Launch Batch Operation"
+   name="launch" id="launch" />
+  <script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+      tracker = new StatusTracker({ 'domain': true, 'domainContainer': $('#domainer') });
+      window.haveDialog = false;
+      /*$('.status-handler').live('change.status', function(e, val) { log('New pct:', val, arguments, this); })*/
+      tracker.bind('change', function(e, hand, val) { log('New pct:', val, arguments, this); });
+      tracker.bind('complete', function(e) { console.log(this, 'complete'); });
+      tracker.bind('postconf', function(e, conf) { 
+        if (window.haveDialog) {
+          return;
+        }
+        conf.dialog = {
+          elm: $('#dialog'),
+          modal: false,
+          closeOnEscape: false,
+          resizable: false,
+        }
+        hand.config(conf);
+        window.haveDialog = true;
+      });
+      tracker.start();
+
+      var launchUrl = "{% url status-test-op domain=domain %}";
+      $('#launch').click(function() {
+        $.post(launchUrl,
+               function(data, status, xhr) { alert('Launched BO#' + data); });
+      });
+    });
+  </script>
+</body>
+</html>

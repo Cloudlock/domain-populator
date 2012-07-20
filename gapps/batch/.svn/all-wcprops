@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/13202/DP/trunk/gapps/batch
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/10260/DP/trunk/gapps/batch/__init__.py
+END
+handlers.py
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/13202/DP/trunk/gapps/batch/handlers.py
+END
+utils.py
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/10260/DP/trunk/gapps/batch/utils.py
+END

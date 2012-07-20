@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/10260/DP/trunk/lib/gdata/apps/migration
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/10260/DP/trunk/lib/gdata/apps/migration/__init__.py
+END
+service.py
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/10260/DP/trunk/lib/gdata/apps/migration/service.py
+END

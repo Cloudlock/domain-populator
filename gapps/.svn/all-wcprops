@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/!svn/ver/14719/DP/trunk/gapps
+END
+docnames.py
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/10260/DP/trunk/gapps/docnames.py
+END
+collab.py
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/13203/DP/trunk/gapps/collab.py
+END
+views.py
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/14719/DP/trunk/gapps/views.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/10260/DP/trunk/gapps/__init__.py
+END
+task_views.py
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/10365/DP/trunk/gapps/task_views.py
+END
+accumulators.py
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/10260/DP/trunk/gapps/accumulators.py
+END
+usernames.py
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/10260/DP/trunk/gapps/usernames.py
+END
+ajax.py
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/10260/DP/trunk/gapps/ajax.py
+END
+models.py
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/13202/DP/trunk/gapps/models.py
+END
+decorators.py
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/10916/DP/trunk/gapps/decorators.py
+END
+tasks.py
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/10260/DP/trunk/gapps/tasks.py
+END
+urls.py
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/13202/DP/trunk/gapps/urls.py
+END
+forms.py
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/13202/DP/trunk/gapps/forms.py
+END
+enqueue.py
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/10365/DP/trunk/gapps/enqueue.py
+END

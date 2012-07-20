@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/10260/DP/trunk/appengine_django/auth
+END
+templatetags.py
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/10260/DP/trunk/appengine_django/auth/templatetags.py
+END
+middleware.py
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/10260/DP/trunk/appengine_django/auth/middleware.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/10260/DP/trunk/appengine_django/auth/__init__.py
+END
+tests.py
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/10260/DP/trunk/appengine_django/auth/tests.py
+END
+models.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/10260/DP/trunk/appengine_django/auth/models.py
+END
+decorators.py
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/10260/DP/trunk/appengine_django/auth/decorators.py
+END

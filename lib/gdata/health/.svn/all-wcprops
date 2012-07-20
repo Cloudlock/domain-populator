@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/10260/DP/trunk/lib/gdata/health
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/10260/DP/trunk/lib/gdata/health/__init__.py
+END
+service.py
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/10260/DP/trunk/lib/gdata/health/service.py
+END

@@ -1,0 +1,1 @@
+from gapps.batch.utils import get_handler

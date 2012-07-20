@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Access Denied{% endblock %}
+
+{% block content %}
+
+<h1>Access Denied</h1>
+
+{{msg|safe}}
+
+{% endblock %}
+
+
+{% block bodyendscript %}
+<script type="text/javascript">
+_gaq.push(['_trackEvent', 'Errors', 'Access Denied', 'URL: '+document.location]);
+</script>
+{% endblock %}

@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/10260/DP/trunk/lib/gdata/tlslite
+END
+TLSRecordLayer.py
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/10260/DP/trunk/lib/gdata/tlslite/TLSRecordLayer.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/10260/DP/trunk/lib/gdata/tlslite/__init__.py
+END
+Checker.py
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/10260/DP/trunk/lib/gdata/tlslite/Checker.py
+END
+X509.py
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/10260/DP/trunk/lib/gdata/tlslite/X509.py
+END
+FileObject.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/10260/DP/trunk/lib/gdata/tlslite/FileObject.py
+END
+SessionCache.py
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/10260/DP/trunk/lib/gdata/tlslite/SessionCache.py
+END
+HandshakeSettings.py
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/10260/DP/trunk/lib/gdata/tlslite/HandshakeSettings.py
+END
+messages.py
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/10260/DP/trunk/lib/gdata/tlslite/messages.py
+END
+api.py
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/10260/DP/trunk/lib/gdata/tlslite/api.py
+END
+errors.py
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/10260/DP/trunk/lib/gdata/tlslite/errors.py
+END
+constants.py
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/10260/DP/trunk/lib/gdata/tlslite/constants.py
+END
+mathtls.py
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/10260/DP/trunk/lib/gdata/tlslite/mathtls.py
+END
+BaseDB.py
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/10260/DP/trunk/lib/gdata/tlslite/BaseDB.py
+END
+VerifierDB.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/10260/DP/trunk/lib/gdata/tlslite/VerifierDB.py
+END
+TLSConnection.py
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/10260/DP/trunk/lib/gdata/tlslite/TLSConnection.py
+END
+Session.py
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/10260/DP/trunk/lib/gdata/tlslite/Session.py
+END
+SharedKeyDB.py
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/10260/DP/trunk/lib/gdata/tlslite/SharedKeyDB.py
+END
+X509CertChain.py
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/10260/DP/trunk/lib/gdata/tlslite/X509CertChain.py
+END

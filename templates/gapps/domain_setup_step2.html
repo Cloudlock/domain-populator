@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Domain Setup{% endblock %}
+
+{% block content %}
+
+<h2>Thank you!</h2>
+
+{# no need for checking callback here -- we only serve this template if there is a callback and step=2 param in the URL. #}
+
+<div class="gentle-warning" style="padding-top:0">
+
+  <p>
+    <b>Note: this application is not yet installed on your domain.</b>
+
+    You must complete the installation process by clicking the
+    <i>continue</i> link below, and enabling the app within your
+    domain.
+  </p>
+
+  <p><b style="font-size:160%">
+      <a href="{{callback}}">Continue&nbsp;installation&nbsp;&raquo;</a>
+  </b></p>
+
+</div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,181 @@
+{% extends 'base.html' %}
+
+{% block head_extras %}
+{#  {% include 'gapps/_jquery_ui_headers.html' %}#}
+    <link type="text/css" href="/static/js/jquery-ui/css/aprigo/jquery-ui-1.8.9.custom.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+    <script src="/static/js/dialog.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="/static/js/pending_admin_actions.js"></script>
+    
+  <link rel="stylesheet" href="/static/css/screen.css" type="text/css"
+    media="screen, projection">
+  <link rel="stylesheet" href="/static/css/print.css" type="text/css"
+    media="print">
+  <!--[if IE]>
+    <link rel="stylesheet" href="/static/css/ie.css" type="text/css"
+      media="screen, projection">
+  <![endif]-->
+  <link rel="stylesheet" href="/static/css/vault.css" type="text/css"
+    media="screen, projection">
+
+{% endblock %}
+
+{% block title %}Cloudlock for {{ domain }}{%  endblock %}
+
+
+{% block content %}
+
+
+  <div class="container">
+
+  <script type="text/javascript" charset="utf-8">
+    {% include 'js/error_form.js' %}
+    $(document).ready(setupForm);
+{% if open_error_dialog %}
+            $("#error_dialog").dialog('open');
+
+
+    {% endif %}
+</script>
+
+  <script src='/_ah/channel/jsapi'></script>
+    <script type="text/javascript">
+
+    var state = {
+        batch_id: '{{ batch_id }}',
+        progress_pct: '{{ progress_pct }}'
+      };
+
+    updateStatus = function() {
+        lastUpdate = (new Date()).getTime();
+
+
+        $("#progress-bar").attr("src", "http://chart.apis.google.com/chart?cht=bhs&chs=200x36&chd=t:"+state.progress_pct+"&chco=4d89f9");
+
+        var statContainer = $(".stat_progress_pct").text(state.progress_pct);
+        if(state.progress_pct) {
+            statContainer.parent().removeClass("zero");
+        }
+
+
+      };
+
+    sendMessage = function(path, opt_param) {
+        path += '?g=' + state.batch_id;
+        if (opt_param) {
+          path += '&' + opt_param;
+        }
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', path, true);
+        xhr.send();
+      };
+
+    onOpened = function() {
+        sendMessage('/opened');
+      };
+
+      onMessage = function(m) {
+        newState = JSON.parse(m.data);
+        state.progress_pct = newState.progress_pct;
+        updateStatus();
+      }
+
+      openChannel = function() {
+        var token = '{{ token }}';
+        var channel = new goog.appengine.Channel(token);
+        var handler = {
+          'onopen': onOpened,
+          'onmessage': onMessage,
+          'onerror': function() {},
+          'onclose': function() {}
+        };
+        var socket = channel.open(handler);
+        socket.onopen = onOpened;
+        socket.onmessage = onMessage;
+      }
+
+      initialize = function() {
+        openChannel();
+{#        var i;#}
+{#        for (i = 0; i < 9; i++) {#}
+{#          var square = document.getElementById(i);#}
+{#          square.onmouseover = new Function('highlightSquare(' + i + ')');#}
+{#          square.onclick = new Function('moveInSquare(' + i + ')');#}
+{#        }#}
+{#        onMessage({data: '{{ initial_message }}'});#}
+      }
+
+      setTimeout(initialize, 100);
+
+
+    </script>
+
+
+  <table class="header" style="width:auto;"><tr><td  style="width:50%;">
+    <h1>Domain Populator Status</h1>
+    <p>You will receive an email once the populator has completed.</p>
+    </td><td style="vertical-align:top; padding-top:0; text-align:right;">
+
+
+{#                <button type="button" class="positive" id="getCloudLock">#}
+
+                   <a href="http://www.google.com/enterprise/marketplace/viewListing?productListingId=5649+9637511031539972110&amp;utm_medium=button&amp;utm_source=button-aprigo.com" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','www.google.com']);"><img src="/static/img/marketingbanner.png" alt=""/></a>
+{#                </button>#}
+
+
+
+    </td></tr>
+    </table>
+
+
+    <a href="" id="status-update"></a>
+
+    <p style="text-align:center;">
+        <img style="position: relative; top: 4px;" id="progress-bar" src="https://chart.googleapis.com/chart?cht=bhs&chs=200x36&chd=t:{{progress_pct}}&chco=4d89f9" width="200" height="36"/>
+        <span style="font-size: 140%; position: relative; top: -4px; padding-left:1em">
+        <span class="stat_progress_pct">{{progress_pct}}</span>% done
+        </span>
+    </p>
+
+    <form id="error_form" action="{% url gapps-domain-status-error domain=domain %}" method="post">
+        <input id="id_hidden1" type="hidden" name="hidden1" value="True"/>
+
+    </form>
+
+      <!-- dialogs -->
+          <div id="error_dialog" title="Error" style="display:none;">
+              <p id="error_dialog_text" class="error_standard_dialog">
+                  </p><div id="username_error_msg"></div>
+
+              <p>We unfortunately can't create users for your domain.  You can still create test users manually from a CSV file.  <a href="{% url gapps-domain-wizard-learn-more domain=domain %}">Learn More</a> </p>
+              <p>If you would like we can create documents for all the users in your domain.</p>
+              </p>
+          </div>
+
+
+
+  </div>
+
+{% endblock %}
+
+{% block bodyendscript %}
+  {{ block.super }}
+  <script src="/static/js/vault.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/static/js/jquery.qtip.js" type="text/javascript"
+   charset="utf-8"></script>
+  <link rel="stylesheet" href="/static/css/jquery.qtip.css" type="text/css"
+   media="screen" charset="utf-8">
+  <link rel="stylesheet" href="/static/css/timePicker.css" type="text/css"
+   media="screen" charset="utf-8">
+  <script src="/static/js/jquery.timePicker.min.js" type="text/javascript"
+    charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+    {% include 'js/error_form.js' %}
+    $(document).ready(setupForm);
+    {% if open_error_dialog %}
+            $("#error_dialog").dialog('open');
+
+
+    {% endif %}
+</script>
+{% endblock %}

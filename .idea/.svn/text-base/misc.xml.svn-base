@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DependencyValidationManager">
+    <option name="SKIP_IMPORT_STATEMENTS" value="false" />
+  </component>
+  <component name="ProjectResources">
+    <default-html-doctype>http://www.w3.org/1999/xhtml</default-html-doctype>
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 2.6.1 (/System/Library/Frameworks/Python.framework/Versions/2.6/bin/python)" project-jdk-type="Python SDK" />
+  <component name="SvnBranchConfigurationManager">
+    <option name="myConfigurationMap">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="branchMap">
+                <map>
+                  <entry key="https://aprigo.jira.com/svn/GDOCS/trunk">
+                    <value>
+                      <list>
+                        <SvnBranchItem>
+                          <option name="creationDateMillis" value="1307808002233" />
+                          <option name="revision" value="10874" />
+                          <option name="url" value="https://aprigo.jira.com/svn/GDOCS/trunk/cloudlock" />
+                        </SvnBranchItem>
+                        <SvnBranchItem>
+                          <option name="creationDateMillis" value="1307808002233" />
+                          <option name="revision" value="10874" />
+                          <option name="url" value="https://aprigo.jira.com/svn/GDOCS/trunk/docs" />
+                        </SvnBranchItem>
+                        <SvnBranchItem>
+                          <option name="creationDateMillis" value="1305232124217" />
+                          <option name="revision" value="10401" />
+                          <option name="url" value="https://aprigo.jira.com/svn/GDOCS/trunk/.gitignore" />
+                        </SvnBranchItem>
+                        <SvnBranchItem>
+                          <option name="creationDateMillis" value="1294773823999" />
+                          <option name="revision" value="202" />
+                          <option name="url" value="https://aprigo.jira.com/svn/GDOCS/trunk/experiments" />
+                        </SvnBranchItem>
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="https://aprigo.jira.com/svn/TC/branches">
+                    <value>
+                      <list />
+                    </value>
+                  </entry>
+                  <entry key="https://aprigo.jira.com/svn/TC/tags">
+                    <value>
+                      <list />
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="branchUrls">
+                <list>
+                  <option value="https://aprigo.jira.com/svn/GDOCS/trunk" />
+                  <option value="https://aprigo.jira.com/svn/TC/branches" />
+                  <option value="https://aprigo.jira.com/svn/TC/tags" />
+                </list>
+              </option>
+              <option name="trunkUrl" value="https://aprigo.jira.com/svn/TC/trunk" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="mySupportsUserInfoFilter" value="true" />
+  </component>
+</project>
+

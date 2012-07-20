@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ApplicationManifest xmlns="http://schemas.google.com/ApplicationManifest/2009">
+  <Support>
+    <!-- URL for app setup as an optional redirect during the install -->
+    <Link rel="setup" href="{{baseurl}}${DOMAIN_NAME}/setup/" />
+
+    <!-- URL for app config, accessed from the app settings page in the control panel -->
+    <Link rel="manage" href="{{baseurl}}${DOMAIN_NAME}/admin/report/" />
+
+    <!-- URL explaining how customers get support. -->
+    <Link rel="support" href="{{baseurl}}support/" />
+
+    <!-- URL that is displayed to admins during the deletion process, to specify policies such as data retention, how to claim accounts, etc. -->
+    <Link rel="deletion-policy" href="{{baseurl}}deletion_policy/" />
+  </Support>
+
+  <!-- Name and description pulled from message bundles -->
+
+  <Name>CloudLock Domain Populator</Name>
+
+  <Description>CloudLock Domain Populator automatically creates test users and documents for testing Google Apps and any add ons.</Description>
+
+  <!-- Show this link in Google's universal navigation for all users -->
+  <Extension id="navLink" type="link">
+    <Name>CloudLock Domain Populator</Name>
+    <Url>{{baseurl}}${DOMAIN_NAME}/</Url>
+
+    <!-- This app uses the Docs and Provisioning APIs -->
+    <Scope ref="docsFeed"/>
+    <Scope ref="provReadOnlyFeed"/>
+  </Extension>
+
+  <!-- Declare our OpenID realm so our app is white listed -->
+  <Extension id="realm" type="openIdRealm">
+    <Url>{{openID_realm}}</Url>
+    <Scope ref="docsFeed"/>
+    <Scope ref="provReadOnlyFeed"/>
+  </Extension>
+
+  <!-- Need access to the Docs feed -->
+  <Scope id="docsFeed">
+    <Url>https://docs.google.com/feeds/</Url>
+    <Reason>This application accesses document information.</Reason>
+  </Scope>
+
+  <Scope id="provReadOnlyFeed">
+    <Url>https://apps-apis.google.com/a/feeds/user/#readonly</Url>
+    <Reason>This application accesses user information.</Reason>
+  </Scope>
+
+</ApplicationManifest>

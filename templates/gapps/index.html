@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Cloudlock for {{ domain }}{%  endblock %}
+
+{% block content %}
+<p>Welcome to the Cloudlock Data Generation program.  You are connected on {{ domain }}</p>
+
+
+    <a href="{% url gapps-domain-delete-docs domain=domain %}">Delete Docs</a>
+    <a href="{% url gapps-domain-crawl-users domain=domain %}">User Crawl</a>
+    <a href="{% url gapps-domain-wizard domain=domain %}">Wizard</a>
+    <a href="{% url gapps-domain-oauth %}?domain={{ domain }}">OAuth</a>
+
+
+{% endblock %}
+
